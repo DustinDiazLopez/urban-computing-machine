@@ -1,6 +1,6 @@
 # Minecraft Spigot Server Setup Script
 
 ```sh
-wget https://raw.githubusercontent.com/DustinDiazLopez/urban-computing-machine/main/setup.sh && \
+wget https://dustindiazlopez.github.io/urban-computing-machine/setup.sh && \
 sh setup.sh
 ```
