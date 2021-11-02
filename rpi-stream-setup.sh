@@ -5,11 +5,11 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install -y ffmpeg v4l-utils vim git screen
 
 sudo dphys-swapfile swapoff
-sudo nano /etc/dphys-swapfile
+cat /etc/dphys-swapfile | sed 's/CONF_SWAPSIZE=100/CONF_SWAP_SIZE=2048/' > /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
-echo "enable camera interface and give 256 to GPU!"
+echo "enable camera interface and give 256M to GPU!"
 read "Ready?"
 echo 
 
