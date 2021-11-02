@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get update
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y ffmpeg v4l-utils vim git screen
@@ -13,5 +15,4 @@ echo
 
 sudo raspi-config
 
-
-ffmpeg -f v4l2 -input_format mjpeg -video_size 1280x720 -framerate 15 -threads 0 -i /dev/video0 -f flv rtmp://159.203.188.180/show/rpi
+# ffmpeg -f v4l2 -input_format h264 -video_size 1280x720 -framerate 15 -threads 0 -i /dev/video0 -vcodec copy -an -f flv rtmp://159.203.188.180/show/rpi-zero-2
