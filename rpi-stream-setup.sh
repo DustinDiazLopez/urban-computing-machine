@@ -9,9 +9,10 @@ cat /etc/dphys-swapfile | sed 's/CONF_SWAPSIZE=100/CONF_SWAP_SIZE=2048/' > /etc/
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
-echo "enable camera interface and give 256M to GPU!"
-read "Ready?"
-echo 
+echo "---------"
+echo "[INFO]: enable camera interface and give 256 megs of the ram to the GPU!"
+read "[INFO]: Ready?"
+echo "---------"
 
 sudo raspi-config
 
