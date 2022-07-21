@@ -1,0 +1,3 @@
+FROM nimmis/spigot:latest
+
+
