@@ -14,7 +14,7 @@ git config --global --unset core.autocrlf
 java -jar BuildTools.jar --rev latest
 echo "eula=true" > eula.txt
 
-cp ../urban-computing-machine/plugins/. ./plugins/.
+cp ../plugins/1.19/. ./plugins/.
 
 # create a detached screen and run the command on the prev created screen
 screen -dmS minecraft-server-spigot

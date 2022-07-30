@@ -2,7 +2,8 @@
 
 ## Minecraft Spigot Server Setup Script
 
-```sh
-wget https://dustindiazlopez.github.io/urban-computing-machine/mc-server-setup.sh && \
+```bash
+git clone https://github.com/DustinDiazLopez/urban-computing-machine.git
+cd urban-computing-machine
 sh mc-server-setup.sh
 ```
