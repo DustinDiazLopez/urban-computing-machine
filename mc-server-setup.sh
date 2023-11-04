@@ -14,11 +14,13 @@ git config --global --unset core.autocrlf
 java -jar BuildTools.jar --rev latest
 echo "eula=true" > eula.txt
 
-cp ../plugins/1.19/. ./plugins/.
+# cp ../plugins/1.19/. ./plugins/.
 
 # create a detached screen and run the command on the prev created screen
 screen -dmS minecraft-server-spigot
-screen -S minecraft-server-spigot -X stuff 'java -Xms3G -Xmx3G -XX:+UseG1GC -jar spigot-1.9.jar -p 80 -nogui\n'
+screen \
+  -S minecraft-server-spigot \
+  -X stuff "java -Xms512M -Xmx2G -XX:+UseG1GC -jar $(find . -maxdepth 1 -type f -name "spigot-*.jar") -p 80 -nogui\n"
 
 # screen -ls
 # screen -r <pid>
